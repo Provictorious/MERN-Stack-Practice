@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Even Numbers</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="input-group mb-3">
+                    <input id="inputNumbers" type="text" class="form-control" placeholder="Enter numbers separated by commas">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" onclick="filterAndDisplay()">Filter Even Numbers</button>
+                    </div>
+                </div>
+                <div id="output"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function filterEvenNumbers(arr) {
+            return arr.filter(num => num % 2 === 0);
+        }
+
+        function parseArray(input) {
+            const arr = input.split(",").map(num => parseInt(num.trim(), 10));
+
+            if (arr.some(isNaN)) {
+                throw new Error("Invalid input. Please enter numbers separated by commas.");
+            }
+
+            return arr;
+        }
+
+        function filterAndDisplay() {
+            try {
+                const userInput = document.getElementById("inputNumbers").value;
+                const userArray = parseArray(userInput);
+
+                const filteredArray = filterEvenNumbers(userArray);
+
+                
+                const outputElement = document.getElementById("output");
+                outputElement.innerHTML = `
+                    <p>Original Array: [${userArray.join(", ")}]</p>
+                    <p>Filtered Even Numbers: [${filteredArray.join(", ")}]</p>
+                `;
+
+              
+                console.log("Original Array: " + userArray);
+                console.log("Filtered Even Numbers: " + filteredArray);
+            } catch (error) {
+                
+                const outputElement = document.getElementById("output");
+                outputElement.innerHTML = `<p>Error: ${error.message}</p>`;
+                console.log(error.message);
+            }
+        }
+    </script>
+</body>
+</html>
