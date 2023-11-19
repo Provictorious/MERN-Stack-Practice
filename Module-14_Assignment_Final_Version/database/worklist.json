@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "Grow Your Business",
+      "description": "We help identify the best ways to improve your business",
+      "link": "#",
+      "icon": "https://raw.githubusercontent.com/Ramrachai/ostad-mern/1700b7053abec7b1b8163ac9c93c6e92bedb2906/module14/public/workIcons/Activity.svg"
+    },
+    {
+      "id": 2,
+      "title": "Improve brand loyalty",
+      "description": "We help identify the best ways to improve your business",
+      "link": "#",
+      "icon": "https://raw.githubusercontent.com/Ramrachai/ostad-mern/1700b7053abec7b1b8163ac9c93c6e92bedb2906/module14/public/workIcons/Heart.svg"
+    },
+    {
+      "id": 3,
+      "title": "Improve Business Model",
+      "description": "We help identify the best ways to improve your business",
+      "link": "#",
+      "icon": "https://raw.githubusercontent.com/Ramrachai/ostad-mern/1700b7053abec7b1b8163ac9c93c6e92bedb2906/module14/public/workIcons/Work.svg"
+    }
+]
+  

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/avenir');
+:root {
+  --primary: #20B15A;
+  --secondary: #D7F5DC;
+  --light: #fff;
+  --dark: #000000;
+  --gray: #F8F9FC;
+}
+
+*{
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+p, a {
+  font-family: 'Avenir', sans-serif;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--primary);
+  color: var(--light);
+  transition: all 0.3s ease;
+}
+button.outlined{
+  background-color: transparent;
+  color: var(--dark);
+  border: 1px solid var(--primary);
+}
+
+button:hover {
+  background-color: var(--secondary);
+  color: var(--dark);
+}
+
+input,
+textarea {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--gray);
+  color: var(--dark);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--secondary);
+}
